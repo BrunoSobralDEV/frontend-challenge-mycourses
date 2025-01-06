@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { StyledHeader } from "./sharedStyles";
+import * as S from "./sharedStyles";
 
 export default function Header() {
   return (
-    <StyledHeader>
+    <S.Header>
       <div style={{ display: "flex", flexDirection: "row", gap: "1.25rem" }}>
         <Image
           alt="evob-logo"
@@ -11,15 +11,20 @@ export default function Header() {
           width={20}
           height={20}
         />
-        <Image
-          alt="evob-logo"
-          src="/icons/magnifying-glass.svg"
-          width={20}
-          height={20}
-        />
+        <S.Button aria-label="botao lupa">
+          <Image
+            alt="evob-logo"
+            src="/icons/magnifying-glass.svg"
+            width={20}
+            height={20}
+          />
+        </S.Button>
       </div>
       <Image alt="evob-logo" src="/images/logo.svg" width={50} height={20} />
-      <Image alt="evob-logo" src="/icons/login.svg" width={32} height={32} />
-    </StyledHeader>
+      <S.Button aria-label="botao login">
+        <Image alt="evob-logo" src="/icons/login.svg" width={32} height={32} />
+      </S.Button>
+
+    </S.Header>
   );
 }
