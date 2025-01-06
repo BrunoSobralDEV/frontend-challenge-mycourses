@@ -17,7 +17,7 @@ export const Section = styled.section`
     
     max-height: 540px;
     width: 100%;
-    /* min-width:922px; */
+    /* min-width:952px; To-do -> apply only bg-image*/
   }
 `;
 
@@ -30,7 +30,12 @@ export const ContentWrapper = styled.div`
   flex-direction: column;
   gap: 0.5em;
 
-  
+  @media screen and (min-width: ${({ theme }) => theme.screen.sm}) {
+    left: 44px;
+    bottom: 61px;
+
+    gap: 97px;
+  }
 `
 
 export const Description = styled.p`

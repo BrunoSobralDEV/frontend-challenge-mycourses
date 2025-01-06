@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import * as S from './sharedStyles'
+import Image from "next/image";
+import * as S from "./styled/Layout.styled";
 
 export default function Footer() {
   return (
@@ -29,8 +29,6 @@ export default function Footer() {
           width={20}
           height={20}
         />
-        
-        
       </div>
       <p>Termos de uso</p>
       <p>Política de privacidade</p>
@@ -40,5 +38,5 @@ export default function Footer() {
         <span>ES</span>
       </div>
     </S.Footer>
-  )
+  );
 }
