@@ -6,13 +6,18 @@ declare module 'styled-components' {
       primary: string;
       secondary: string;
       background: string;
+      black: string;
       text: string;
       textSecondary: string;
+      textMuted: string;
     };
     fontSizes: {
-      small: string;
-      medium: string;
-      large: string;
+      sm: string;
+      md: string;
+      lg: string;
+      xl: string;
+      '2xl': string;
+      '3xl': string;
     };
   }
 }
