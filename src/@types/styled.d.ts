@@ -8,8 +8,9 @@ declare module 'styled-components' {
       background: string;
       black: string;
       text: string;
-      textSecondary: string;
-      textMuted: string;
+      "text-secondary": string;
+      "text-muted": string;
+      "text-footer": string;
     };
     fontSizes: {
       sm: string;
@@ -18,6 +19,12 @@ declare module 'styled-components' {
       xl: string;
       '2xl': string;
       '3xl': string;
+    };
+    screen: {
+      sm: string;
+      md: string;
+      lg: string;
+      xl: string;
     };
   }
 }

@@ -7,8 +7,9 @@ const theme: DefaultTheme = {
     black: '#000000',
     background: '#F1FBF2',
     text: '#090909',
-    textSecondary: '#FFFFFF',
-    textMuted: '#666666',
+    "text-secondary": '#FFFFFF',
+    "text-muted": '#666666',
+    "text-footer": '#262525'
   },
   fontSizes: {
     sm: '12px',

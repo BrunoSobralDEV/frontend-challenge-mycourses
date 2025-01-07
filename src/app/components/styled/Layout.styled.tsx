@@ -22,7 +22,9 @@ const Footer = styled.footer`
   background-color: ${({ theme }) => theme.colors.background};
   padding: 1.25rem;
   font-size: 0.75rem;
-  color: ${({ theme}) => theme.colors.textSecondary};
+  font-weight: 700;
+  font-family: var(--font-quattrocento);
+  color: ${({ theme }) => theme.colors["text-footer"]};
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -31,18 +33,24 @@ const Footer = styled.footer`
     display: flex;
     gap: 1.25rem;
   }
-  
-  .links {
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .languages {
     display: flex;
     gap: 1.25rem;
   }
 
-  .links span:first-child {
+  .languages span:first-child {
     position: relative;
   }
 
-  .links span:first-child::after {
-    content: '';
+  .languages span:first-child::after {
+    content: "";
     position: absolute;
     left: 0;
     bottom: -5px;
@@ -51,6 +59,16 @@ const Footer = styled.footer`
     background-color: ${({ theme }) => theme.colors.primary};
   }
 
-`
+  @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 63px 60px;
+
+    .details {
+      flex-direction: row;
+      gap: 60px;
+    }
+  }
+`;
 
 export { Header, Button, Footer };

@@ -39,7 +39,7 @@ export const ContentWrapper = styled.div`
 `
 
 export const Description = styled.p`
-  color: ${({ theme}) => theme.colors.textSecondary};
+  color: ${({ theme}) => theme.colors["text-secondary"]};
   max-width: 300px;
 
   font-size: ${({ theme}) => theme.fontSizes["2xl"]};
@@ -49,7 +49,7 @@ export const Description = styled.p`
 
 export const Button = styled.button`
   background-color: ${({ theme }) => theme.colors.black};
-  color: ${({ theme }) => theme.colors.textSecondary};
+  color: ${({ theme }) => theme.colors["text-secondary"]};
 
   width: 192px;
   height: 52px;
