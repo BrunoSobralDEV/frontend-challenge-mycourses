@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
 
   .container {
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto 1fr 1fr auto;
     min-height: 100vh;
   }
 
