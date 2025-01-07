@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import * as S from './styled/CourseCard.styled'
+import Favorite from './Favorite';
 
 export default function CourseCard() {
   const courses = [
@@ -12,16 +13,21 @@ export default function CourseCard() {
     <>
     {courses.map((course) => (
       <S.CourseCard key={course.id}>
-        <Image src="/images/course.png" alt={course.title} width="0" height="0"/>
-        <S.FireOnline>
-          <Image src="/icons/fire.svg" width='22' height='22' alt='fire icon' />
-          <span>ONLINE</span>
-        </S.FireOnline>
-        <div className="content">
+        <S.CardHeader>
+          <Image className='img-banner' src="/images/course.png" alt={course.title} width="0" height="0"/>
+          <S.Favorite>
+            <Favorite />
+          </S.Favorite>
+          <S.FireOnline>
+            <Image src="/icons/fire.svg" width='22' height='22' alt='fire icon' />
+            <span>ONLINE</span>
+          </S.FireOnline>
+        </S.CardHeader>
+        <S.CardContent>
           <h3>{course.title}</h3>
           <p>{course.author}</p>
           <button>Acessar</button>
-        </div>
+        </S.CardContent>
       </S.CourseCard>
     ))}
   </>

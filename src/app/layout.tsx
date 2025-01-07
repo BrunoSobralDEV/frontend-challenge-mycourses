@@ -1,9 +1,28 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Inter, Roboto_Condensed, Quattrocento  } from "next/font/google";
 import StyledComponentsRegistry from "@/lib/styled-components-registry";
 import ClientLayout from "@/lib/client-layout";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
+ 
+const roboto_condensed = Roboto_Condensed({
+  subsets: ['latin'],
+  variable: '--font-roboto_condensed',
+  display: 'swap',
+})
+
+const quattrocento = Quattrocento({
+  subsets: ['latin'],
+  variable: '--font-quattrocento',
+  display: 'swap',
+  weight: ['400', '700']
+})
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,8 +45,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="pt-BR">
+      <body className={`${inter.variable} ${roboto_condensed.variable} ${quattrocento.variable}`}>
         <StyledComponentsRegistry>
           <ClientLayout>
             <div className="container">

@@ -9,6 +9,7 @@ const Header = styled.header`
   align-items: center;
   justify-content: space-between;
   padding: 16px 20px 20px;
+  font-family: var(--font-roboto_condensed);
 `;
 
 const Button = styled.button`
