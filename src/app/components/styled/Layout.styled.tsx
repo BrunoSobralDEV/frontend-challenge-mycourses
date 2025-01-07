@@ -10,6 +10,10 @@ const Header = styled.header`
   justify-content: space-between;
   padding: 16px 20px 20px;
   font-family: var(--font-roboto_condensed);
+
+  @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
+    padding: 20px 60px;
+  }
 `;
 
 const Button = styled.button`
