@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from "react";
 import Image from "next/image";
-import * as S from "./styled/Favorite.styled";
+import * as S from "./styled/FavoriteButton.styled";
 
 export default function Favorite() {
   const [isFavorited, setIsFavorited] = useState(false);

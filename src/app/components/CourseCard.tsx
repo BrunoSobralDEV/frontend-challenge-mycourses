@@ -1,35 +1,41 @@
-import Image from 'next/image';
-import * as S from './styled/CourseCard.styled'
-import Favorite from './Favorite';
+import Image from "next/image";
+import * as S from "./styled/CourseCard.styled";
+import Favorite from "./FavoriteButton";
+import { CourseCardProps } from "./Courses";
 
-export default function CourseCard() {
-  const courses = [
-    { id: 1, title: 'Webscrapping', author: 'Lucas', image: '/path/to/image1.jpg' },
-    { id: 2, title: 'Ciência de dados', author: 'Daniel', image: '/path/to/image2.jpg' },
-    { id: 3, title: 'Python para IA', author: 'Lucas', image: '/path/to/image3.jpg' },
-  ];
 
+
+export default function CourseCard({ course }: CourseCardProps) {
   return (
     <>
-    {courses.map((course) => (
-      <S.CourseCard key={course.id}>
+      <S.CourseCard>
         <S.CardHeader>
-          <Image className='img-banner' src="/images/course.png" alt={course.title} width="0" height="0"/>
+          <Image
+            className="img-banner"
+            src={course.thumbnail}
+            alt={course.title}
+            width="300"
+            height="200"
+          />
           <S.Favorite>
             <Favorite />
           </S.Favorite>
           <S.FireOnline>
-            <Image src="/icons/fire.svg" width='22' height='22' alt='fire icon' />
+            <Image
+              src="/icons/fire.svg"
+              width="22"
+              height="22"
+              alt="fire icon"
+            />
             <span>ONLINE</span>
           </S.FireOnline>
         </S.CardHeader>
         <S.CardContent>
           <h3>{course.title}</h3>
-          <p>{course.author}</p>
+          <p>{course.slug}</p>
           <button>Acessar</button>
         </S.CardContent>
       </S.CourseCard>
-    ))}
-  </>
-  )
+    </>
+  );
 }

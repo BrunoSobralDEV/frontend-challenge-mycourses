@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import styled from "styled-components";
 
 export const Section = styled.section`
@@ -7,8 +7,8 @@ export const Section = styled.section`
   h1 {
     margin-bottom: 16px;
   }
-
-  .grid {
+  
+  div {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
@@ -17,4 +17,4 @@ export const Section = styled.section`
   @media screen and (min-width: ${({ theme }) => theme.screen.md }) {
     padding: 48px 60px;
   }
-`;
+`

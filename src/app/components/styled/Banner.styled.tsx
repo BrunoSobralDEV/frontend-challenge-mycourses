@@ -1,5 +1,5 @@
 "use client";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Section = styled.section`
   background-image: url('/images/banner.png');
@@ -39,21 +39,25 @@ export const ContentWrapper = styled.div`
 `
 
 export const Description = styled.p`
-  color: ${({ theme}) => theme.colors["text-secondary"]};
-  max-width: 300px;
-
-  font-size: ${({ theme}) => theme.fontSizes["2xl"]};
-  font-weight: 700;
-  line-height: 1.5;
+  ${({ theme }) => css`
+    color: ${theme.colors["text-secondary"]};
+    max-width: 300px;
+    font-size: ${theme.fontSizes["2xl"]};
+    font-weight: 700;
+    line-height: 1.5;
+    
+  `}
 `;  
 
 export const Button = styled.button`
-  background-color: ${({ theme }) => theme.colors.black};
-  color: ${({ theme }) => theme.colors["text-secondary"]};
+  ${({ theme }) => css`
+    background-color: ${theme.colors.black};
+    color: ${theme.colors["text-secondary"]};
 
-  width: 192px;
-  height: 52px;
-  
-  font-size: ${({ theme}) => theme.fontSizes.md};
-  font-weight: 700;
+    width: 192px;
+    height: 52px;
+    
+    font-size: ${theme.fontSizes.md};
+    font-weight: 700;
+  `}
 `;

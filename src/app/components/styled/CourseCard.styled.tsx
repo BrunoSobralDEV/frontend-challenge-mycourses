@@ -49,7 +49,7 @@ export const CardHeader = styled.header`
   .img-banner {
     width: 100%;
     height: 157px;
-    object-fit: cover;
+    /* object-fit: cover; */
   }
 `
 

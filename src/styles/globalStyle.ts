@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -8,9 +8,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: ${({ theme }) => theme.colors.background};
-    color: ${({ theme }) => theme.colors.text};
-    font-family: var(--font-inter);
+    ${({ theme }) => css`
+      background-color: ${theme.colors.background};
+      color: ${theme.colors.text};
+      font-family: var(--font-inter);
+    `}
   }
 
   .container {
@@ -23,6 +25,17 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     color: ${({ theme }) => theme.colors.primary};
   }
-  `
+
+  h1 {
+    ${({ theme }) => css`
+      font-size: ${theme.fontSizes['xl']};
+      font-weight: normal;
+
+      @media screen and (min-width:${theme.screen.md}){
+        font-size: ${theme.fontSizes['3xl']};
+      }
+    `}
+  }
+`
 
 export default GlobalStyle;
