@@ -8,9 +8,9 @@ export const Section = styled.section`
     margin-bottom: 16px;
   }
   
-  div {
+  .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 315px));
     gap: 20px;
   }
 

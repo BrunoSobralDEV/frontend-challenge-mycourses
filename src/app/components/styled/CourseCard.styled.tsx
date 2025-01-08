@@ -39,7 +39,6 @@ export const CardContent = styled.div`
       &:hover {
         background-color: #692ac3;
       }
-
     }
   }
 `
