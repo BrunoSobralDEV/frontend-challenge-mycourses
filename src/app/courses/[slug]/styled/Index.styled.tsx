@@ -8,28 +8,40 @@ export const Section = styled.section`
     gap: 20px;
   }
 
-  
-
   /* @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
     padding: 48px 60px;
   } */
 `;
 
 export const Banner = styled.div`
-margin-bottom: 24px;
+  margin-bottom: 24px;
   img {
     max-height: 540px;
     width: 100%;
   }
+
+  @media screen and (min-width: ${({ theme}) => theme.screen.md}) {
+      margin-bottom: 48px;
+    }
 `;
 
 export const Wrapper = styled.div`
-position: relative;
-  padding: 0 20px;
+  ${({ theme }) => css`
+    position: relative;
+    padding: 0 20px;
+
+    @media screen and (min-width: ${theme.screen.md}) {
+      display: grid;
+      grid-template-areas: "description button";
+
+      padding: 0 60px;
+    }
+  `}
 `;
 
 export const Button = styled.button`
   ${({ theme }) => css`
+    grid-area: button;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,17 +63,29 @@ export const Button = styled.button`
 
     img {
       filter: invert(1);
+      transition: all 0.5s ease;
     }
 
+    transition: all 0.5s ease;
     @media screen and (min-width: ${theme.screen.md}) {
+      width: 114px;
+      height: 31px;
+
       &:hover {
-        background-color: #692ac3;
+        ${({ theme }) => css`
+          background-color: ${theme.colors.primary};
+          color: white;
+        `}
+        img {
+          filter: invert(0);
+        }
       }
     }
   `}
 `;
 
 export const Content = styled.div`
+  grid-area: description;
   margin-bottom: 24px;
 
   h1 {
@@ -71,15 +95,15 @@ export const Content = styled.div`
 `;
 
 export const Share = styled.div`
-  background-color: ${({ theme }) => theme.colors['bg-button-share']};
+  background-color: ${({ theme }) => theme.colors["bg-button-share"]};
   width: 56px;
   height: auto;
   padding: 16px;
   border-radius: 50%;
-  
+
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
   /* filter: drop-shadow(1px 7px 30px #000000); */
-  
+
   position: absolute;
   bottom: -24px;
   right: 20px;
