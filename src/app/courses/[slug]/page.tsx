@@ -38,7 +38,12 @@ export default async function Course({
           <h1>{course.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: course.long_description }} />
         </S.Content>
-        <S.Share>
+        <S.Share
+          href={`https://wa.me/?text=${encodeURIComponent(
+            `Olá, curso: "${course.title}".`
+          )}`}
+          target="_blank"
+        >
           <Image src={svgShare} width={24} height={24} alt="share icon" />
         </S.Share>
       </S.Wrapper>

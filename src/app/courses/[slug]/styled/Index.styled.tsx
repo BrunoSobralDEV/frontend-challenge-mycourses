@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import styled, { css } from "styled-components";
 
 export const Section = styled.section`
@@ -21,6 +22,9 @@ export const Banner = styled.div`
   }
 
   @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
+    img {
+      min-height: 540px;
+    }
     margin-bottom: 48px;
   }
 `;
@@ -54,6 +58,7 @@ export const Button = styled.button`
 
     background-color: ${theme.colors["bg-button-favorite"]};
     color: ${theme.colors["text-course-page"]};
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     border: none;
     cursor: pointer;
 
@@ -94,7 +99,7 @@ export const Content = styled.div`
   }
 `;
 
-export const Share = styled.div`
+export const Share = styled(Link)`
   background-color: ${({ theme }) => theme.colors["bg-button-share"]};
   width: 56px;
   height: auto;
@@ -102,13 +107,26 @@ export const Share = styled.div`
   border-radius: 50%;
 
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
-  /* filter: drop-shadow(1px 7px 30px #000000); */
+  transition: all 0.5s ease;
 
   position: absolute;
   bottom: -24px;
   right: 20px;
 
+  img {
+    transition: all 0.5s ease;
+  }
+
   @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
     right: 68px;
+    &:hover {
+      ${({ theme }) => css`
+        background-color: ${theme.colors.primary};
+        color: white;
+      `}
+      img {
+        filter: invert(1);
+      }
+    }
   }
 `;
