@@ -13,6 +13,10 @@ const theme: DefaultTheme = {
     "bg-button-favorite": '#FFFFFF',
     "bg-button-share": '#FFFFFF',
     "text-course-page": '#252525',
+    "text-modal-title": "#404040",
+    "bg-whatsapp-button": "2B932F",
+    "bg-button-close-modal":"#FFF",
+    "border-button-close-modal":"#E5E7EB",
   },
   fontSizes: {
     sm: '12px',

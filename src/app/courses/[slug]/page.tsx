@@ -1,8 +1,9 @@
 import * as S from "./styled/Index.styled";
 import Image from "next/image";
 import svgHeart from "/public/icons/heart.svg";
-import svgShare from "/public/icons/share.svg";
+
 import { Course } from "@/app/components/Courses";
+import ModalWrapper from "./ModalWrapper";
 
 export default async function Course({
   params,
@@ -38,14 +39,7 @@ export default async function Course({
           <h1>{course.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: course.long_description }} />
         </S.Content>
-        <S.Share
-          href={`https://wa.me/?text=${encodeURIComponent(
-            `Olá, curso: "${course.title}".`
-          )}`}
-          target="_blank"
-        >
-          <Image src={svgShare} width={24} height={24} alt="share icon" />
-        </S.Share>
+        <ModalWrapper course={course} />
       </S.Wrapper>
     </S.Section>
   );

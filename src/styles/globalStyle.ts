@@ -36,6 +36,13 @@ const GlobalStyle = createGlobalStyle`
       }
     `}
   }
+
+  input {
+    font-family: var(--font-inter);
+    font-size: 14px;
+    
+    color: ${({ theme }) => theme.colors['text-modal-title']}
+;  }
 `
 
 export default GlobalStyle;

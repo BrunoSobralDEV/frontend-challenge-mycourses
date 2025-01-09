@@ -14,6 +14,10 @@ declare module 'styled-components' {
       "bg-button-favorite": string;
       "bg-button-share": string,
       "text-course-page": string;
+      "text-modal-title": string;
+      "bg-whatsapp-button": string;
+      "bg-button-close-modal": string;
+      "border-button-close-modal": string;
     };
     fontSizes: {
       sm: string;
