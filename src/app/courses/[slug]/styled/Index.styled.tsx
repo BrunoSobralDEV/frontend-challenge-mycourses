@@ -24,6 +24,7 @@ margin-bottom: 24px;
 `;
 
 export const Wrapper = styled.div`
+position: relative;
   padding: 0 20px;
 `;
 
@@ -61,6 +62,8 @@ export const Button = styled.button`
 `;
 
 export const Content = styled.div`
+  margin-bottom: 24px;
+
   h1 {
     font-weight: 600;
     margin-bottom: 20px;
@@ -68,13 +71,16 @@ export const Content = styled.div`
 `;
 
 export const Share = styled.div`
-  position: relative;
-  padding: 16px;
+  background-color: ${({ theme }) => theme.colors['bg-button-share']};
   width: 56px;
   height: auto;
+  padding: 16px;
   border-radius: 50%;
+  
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
   /* filter: drop-shadow(1px 7px 30px #000000); */
-  background-color: ${({ theme }) => theme.colors['bg-button-share']};
   
+  position: absolute;
+  bottom: -24px;
+  right: 20px;
 `;
