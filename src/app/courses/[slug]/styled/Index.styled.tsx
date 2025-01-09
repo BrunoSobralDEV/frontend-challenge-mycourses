@@ -20,9 +20,9 @@ export const Banner = styled.div`
     width: 100%;
   }
 
-  @media screen and (min-width: ${({ theme}) => theme.screen.md}) {
-      margin-bottom: 48px;
-    }
+  @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
+    margin-bottom: 48px;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -107,4 +107,8 @@ export const Share = styled.div`
   position: absolute;
   bottom: -24px;
   right: 20px;
+
+  @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
+    right: 68px;
+  }
 `;
