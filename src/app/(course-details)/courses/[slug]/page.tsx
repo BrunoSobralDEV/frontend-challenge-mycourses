@@ -1,9 +1,9 @@
-import * as S from "./styled/Index.styled";
+import * as S from "./page.styled";
 import Image from "next/image";
 import svgHeart from "/public/icons/heart.svg";
 
-import { Course } from "@/app/components/Courses";
-import ModalWrapper from "./_components/ModalWrapper";
+import { Course } from "@/app/_components/Courses";
+import ModalWrapper from "@components/ModalWrapper";
 
 export default async function Course({
   params,

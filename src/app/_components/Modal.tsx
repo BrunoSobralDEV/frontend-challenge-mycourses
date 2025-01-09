@@ -1,5 +1,5 @@
 import Image from "next/image";
-import * as S from "../styled/Modal.styled";
+import * as S from "@styled/Modal.styled";
 import svgCopy from "/public/icons/copy.svg";
 import svgCheck from "/public/icons/check-circle.svg";
 import svgClose from "/public/icons/close.svg";
@@ -24,7 +24,7 @@ export default function Modal({
       <S.Modal onClick={(e) => e.stopPropagation()}>
         <S.ModalHeader>
           <h2>Compartilhar curso</h2>
-          <Image  onClick={toggleFn} src={svgClose} alt="close icon" />
+          <Image onClick={toggleFn} src={svgClose} alt="close icon" />
         </S.ModalHeader>
         <S.InputContainer>
           <input type="text" value={`https://www.curso.com/${slug}`} readOnly />

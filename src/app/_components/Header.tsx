@@ -1,5 +1,5 @@
 import Image from "next/image";
-import * as S from "./styled/Layout.styled";
+import * as S from "../(home)/layout.styled";
 
 export default function Header() {
   return (

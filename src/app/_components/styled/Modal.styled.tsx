@@ -48,18 +48,16 @@ export const ModalOverlay = styled.div`
 `;
 
 export const Modal = styled.div`
-  ${({ theme }) => css`
-    display: flex;
-    flex-direction: column;
-    background: #fff;
-    border-radius: 8px;
-    padding: 12px 16px;
-    width: 90%;
-    max-width: 405px;
-    max-height: 234px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  `};
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 8px;
+  padding: 12px 16px;
+  width: 90%;
+  max-width: 405px;
+  max-height: 234px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
 `;
 
 export const ModalHeader = styled.div`
@@ -90,7 +88,7 @@ export const ModalHeader = styled.div`
 export const InputContainer = styled.div`
   position: relative;
   margin-bottom: 16px;
-  
+
   user-select: none;
   input {
     width: 100%;

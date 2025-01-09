@@ -1,5 +1,5 @@
 "use client";
-import * as S from "../styled/Modal.styled";
+import * as S from "@styled/Modal.styled";
 import Image from "next/image";
 import svgShare from "/public/icons/share.svg";
 import { useState } from "react";
