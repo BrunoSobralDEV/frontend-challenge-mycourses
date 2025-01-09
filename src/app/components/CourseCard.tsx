@@ -2,8 +2,7 @@ import Image from "next/image";
 import * as S from "./styled/CourseCard.styled";
 import Favorite from "./FavoriteButton";
 import { CourseCardProps } from "./Courses";
-
-
+import Link from "next/link";
 
 export default function CourseCard({ course }: CourseCardProps) {
   return (
@@ -32,8 +31,10 @@ export default function CourseCard({ course }: CourseCardProps) {
         </S.CardHeader>
         <S.CardContent>
           <h3>{course.title}</h3>
-          <p>{course.slug}</p>
-          <button>Acessar</button>
+          <p>{course.id}</p>
+          <Link href={`/courses/${course.slug}`}>
+            <button>Acessar</button>
+          </Link>
         </S.CardContent>
       </S.CourseCard>
     </>

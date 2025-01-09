@@ -11,6 +11,9 @@ declare module 'styled-components' {
       "text-secondary": string;
       "text-muted": string;
       "text-footer": string;
+      "bg-button-favorite": string;
+      "bg-button-share": string,
+      "text-course-page": string;
     };
     fontSizes: {
       sm: string;

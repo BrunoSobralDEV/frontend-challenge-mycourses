@@ -9,7 +9,10 @@ const theme: DefaultTheme = {
     text: '#090909',
     "text-secondary": '#FFFFFF',
     "text-muted": '#666666',
-    "text-footer": '#262525'
+    "text-footer": '#262525',
+    "bg-button-favorite": '#FFFFFF',
+    "bg-button-share": '#FFFFFF',
+    "text-course-page": '#252525',
   },
   fontSizes: {
     sm: '12px',

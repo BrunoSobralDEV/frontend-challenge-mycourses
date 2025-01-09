@@ -32,6 +32,7 @@ export const CardContent = styled.div`
     border: none;
     cursor: pointer;
 
+    font-family: var(--font-inter);
     font-size: ${({ theme }) => theme.fontSizes.md};
     font-weight: 700;
 

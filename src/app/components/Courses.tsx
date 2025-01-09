@@ -1,7 +1,7 @@
 import CourseCard from './CourseCard'
 import * as S from './styled/Courses.styled'
 
-interface Course {
+export interface Course {
   id: number;
   title: string;
   slug: string;
