@@ -47,37 +47,65 @@ export const ModalOverlay = styled.div`
   z-index: 1000;
 `;
 
-export const ModalContent = styled.div`
+export const Modal = styled.div`
   ${({ theme }) => css`
     display: flex;
     flex-direction: column;
     background: #fff;
     border-radius: 8px;
-    padding: 16px;
+    padding: 12px 16px;
     width: 90%;
     max-width: 405px;
     max-height: 234px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+  `};
+`;
+
+export const ModalHeader = styled.div`
+  ${({ theme }) => css`
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 54px;
+    width: 100%;
+    margin-bottom: 16px;
+    border-bottom: 1px solid
+      ${({ theme }) => theme.colors["border-button-close-modal"]};
+
+    img {
+      position: absolute;
+      right: 12px;
+      cursor: pointer;
+    }
 
     h2 {
-      margin-bottom: 16px;
-
       font-size: ${theme.fontSizes.md};
       font-weight: 500;
     }
-  `};
+  `}
 `;
 
 export const InputContainer = styled.div`
   position: relative;
   margin-bottom: 16px;
-
+  
+  user-select: none;
   input {
     width: 100%;
-    padding: 9px 12px;
+    padding: 9px 40px 9px 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+    pointer-events: none;
+    span {
+      width: 300px;
+    }
 
     &:focus {
       outline: none;
@@ -106,8 +134,8 @@ export const ButtonWhatsApp = styled(Link)`
   align-items: center;
   justify-content: center;
   gap: 6px;
+  margin-bottom: 16px;
 
-  margin-top: 8px;
   padding: 10px 16px;
   border: none;
   border-radius: 4px;
@@ -119,7 +147,7 @@ export const ButtonWhatsApp = styled(Link)`
 
   transition: all 0.3s ease;
 
-  @media screen (min-width: ${({ theme }) => theme.screen.md}) {
+  @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
     &:hover {
       opacity: 0.9;
     }
@@ -131,11 +159,11 @@ export const ButtonWhatsApp = styled(Link)`
 `;
 
 export const Footer = styled.div`
-  padding: 12px 0;
+  display: flex;
+  justify-content: end;
+  align-items: end;
   height: 60px;
-  margin-top: 16px;
   text-align: right;
-
   border-top: 1px solid
     ${({ theme }) => theme.colors["border-button-close-modal"]};
 
