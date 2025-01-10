@@ -1,19 +1,30 @@
 import { NextResponse } from "next/server";
 
-export async function GET() {
+const fetchCoursesData = async (url: string) => {
   try {
-    const response = await fetch('https://api.evob.dev/content/courses', {
+    const response = await fetch(url, {
       headers: {
         'Content-Type': 'application/json',
         'Origin': 'http://localhost:3024',
       }
     });
-    const data = await response.json();
-    console.log(JSON.stringify(data));
-
+    
+    if (!response.ok) {
+      throw new Error(`HTTP Error: ${response.status}`);
+    }
+    
+    return await response.json();
+  } catch (error) {
+    throw new Error(`Erro ao buscar dados: ${error}`);
+  }
+};
+export async function GET() {
+  const apiUrl = 'https://api.evob.dev/content/courses';
+  try {
+    const data = await fetchCoursesData(apiUrl);
     return NextResponse.json(data);
   } catch (error) {
-    console.error('Erro na requisição:', error);
-    return NextResponse.json({ error: 'Erro ao fazer a requisição' }, { status: 500 });
+    console.error(error);
+    return NextResponse.json({ error }, { status: 500 });
   }
 }
