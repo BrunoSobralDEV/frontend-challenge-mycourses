@@ -12,7 +12,7 @@ async function fetchCouseDetails(slug: string) {
   return response.json()
 }
 
-export default async function Course({
+export default async function CourseDetails({
   params,
 }: {
   params: Promise<{ slug: string }>;

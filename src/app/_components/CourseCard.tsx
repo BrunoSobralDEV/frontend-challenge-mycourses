@@ -1,6 +1,6 @@
 import Image from "next/image";
 import * as S from "./styled/CourseCard.styled";
-import Favorite from "./FavoriteButton";
+import FavoriteButton from "./FavoriteButton";
 import { CourseCardProps } from "./Courses";
 import Link from "next/link";
 
@@ -17,7 +17,7 @@ export default function CourseCard({ course }: CourseCardProps) {
             height="200"
           />
           <S.Favorite>
-            <Favorite />
+            <FavoriteButton slug={course.slug} />
           </S.Favorite>
           <S.FireOnline>
             <Image

@@ -1,33 +1,13 @@
+"useState";
 import * as S from './styled/Favorites.styled'
 import CourseCard from './CourseCard'
 import { Course } from './Courses'
 import svgHearthSearch from '/public/icons/heart-search.svg';
 import Image from 'next/image';
+import { getFavoriteCourses, useFavorite } from '../hooks/useFavorite';
 
 export default function Favorites() {
-  // const courses: Course[] = []
-  const courses = [
-    {
-      id: 1,
-      title: 'Curso de React',
-      slug: '1231',
-      description: 'string',
-      long_description: 'string',
-      banner: '/images/banner.png',
-      banner_mobile: 'string',
-      thumbnail: '/images/banner.png',
-    },
-    {
-      id: 2,
-      title: 'Curso de NodeJS',
-      slug: '1231',
-      description: 'string',
-      long_description: 'string',
-      banner: 'string',
-      banner_mobile: 'string',
-      thumbnail: '/images/banner.png',
-    },
-  ]
+  const courses = getFavoriteCourses()
 
   return (
     <S.Section>

@@ -1,14 +1,14 @@
 "use client"
-import React, { useState } from "react";
 import Image from "next/image";
 import * as S from "./styled/FavoriteButton.styled";
+import { useFavorite } from "../hooks/useFavorite";
 
-export default function Favorite() {
-  const [isFavorited, setIsFavorited] = useState(false);
+interface FavoriteButtonProps {
+  slug: string;
+}
 
-  const toggleFavorite = () => {
-    setIsFavorited((prev) => !prev);
-  };
+export default function FavoriteButton({ slug }: FavoriteButtonProps) {
+  const { isFavorited, toggleFavorite } = useFavorite(slug);
 
   return (
     <S.FavoriteWrapper  onClick={toggleFavorite}>
