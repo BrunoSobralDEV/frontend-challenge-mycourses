@@ -5,6 +5,13 @@ import { CourseCardProps } from "./Courses";
 import Link from "next/link";
 
 export default function CourseCard({ course }: CourseCardProps) {
+  const courseForFavorite = {
+    id: course.id,
+    slug: course.slug,
+    title: course.title,
+    thumbnail: course.thumbnail
+  };
+
   return (
     <>
       <S.CourseCard>
@@ -17,7 +24,7 @@ export default function CourseCard({ course }: CourseCardProps) {
             height="200"
           />
           <S.Favorite>
-            <FavoriteButton slug={course.slug} />
+            <FavoriteButton course={courseForFavorite} />
           </S.Favorite>
           <S.FireOnline>
             <Image
