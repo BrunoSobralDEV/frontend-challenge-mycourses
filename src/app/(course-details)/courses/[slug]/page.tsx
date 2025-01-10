@@ -1,9 +1,16 @@
+import ModalWrapper from "@components/ModalWrapper";
+import { Course } from "@/app/_components/Courses";
+import svgHeart from "/public/icons/heart.svg";
+import { notFound } from "next/navigation";
 import * as S from "./page.styled";
 import Image from "next/image";
-import svgHeart from "/public/icons/heart.svg";
 
-import { Course } from "@/app/_components/Courses";
-import ModalWrapper from "@components/ModalWrapper";
+async function fetchCouseDetails(slug: string) {
+  const response = await fetch(`http://localhost:3000/api/courses/${slug}`);
+  
+  if (!response.ok) return undefined
+  return response.json()
+}
 
 export default async function Course({
   params,
@@ -11,14 +18,11 @@ export default async function Course({
   params: Promise<{ slug: string }>;
 }) {
   const slug = (await params).slug;
+  const courseDetails: Course = await fetchCouseDetails(slug);
 
-  // try {
-  const response = await fetch(`http://localhost:3000/api/courses/${slug}`);
-  const courseDetails: Course = await response.json();
-  // console.log('course aqui',Object(course));
-  // } catch (error) {
-  // console.log('deu ruim', error);
-  // }
+  if (!courseDetails) {
+    notFound();
+  }
 
   return (
     <S.Section>
