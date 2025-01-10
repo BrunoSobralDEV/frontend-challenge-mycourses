@@ -7,7 +7,7 @@ export const NotFoundContainer = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: calc(100vh - 200px);
+  gap: 30px;
   padding: 20px;
 
   h1 {
@@ -38,11 +38,13 @@ export const NotFoundContainer = styled.div`
 
 export const NotFoundImage = styled.div`
   position: relative;
-  width: 250px;
-  height: 250px;
-  margin-bottom: 24px;
-
+  display: none;
+  
   img {
     object-fit: contain;
+  }
+
+  @media screen and (min-width: 768px){
+    display: block;
   }
 `;
