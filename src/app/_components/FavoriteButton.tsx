@@ -1,22 +1,18 @@
 "use client";
 import Image from "next/image";
 import * as S from "./styled/FavoriteButton.styled";
-import { useFavorite } from "../hooks/useFavorite";
+import { FavoriteButtonProps } from "@/@types";
+import { useFavorites } from "../Providers/FavoritesContext";
 
-interface FavoriteButtonProps {
-  course: {
-    id: number;
-    slug: string;
-    title: string;
-    thumbnail: string;
-  };
-}
+
 
 export default function FavoriteButton({ course }: FavoriteButtonProps) {
-  const { isFavorited, toggleFavorite } = useFavorite(course);
+  const { favoriteCourses, toggleFavorite } = useFavorites();
+  const isFavorited = favoriteCourses.some((fav) => fav.slug === course.slug);
+
 
   return (
-    <S.FavoriteWrapper onClick={toggleFavorite}>
+    <S.FavoriteWrapper onClick={() => toggleFavorite(course)}>
       <Image
         src={isFavorited ? "/icons/heart-fill.svg" : "/icons/heart.svg"}
         width="22"

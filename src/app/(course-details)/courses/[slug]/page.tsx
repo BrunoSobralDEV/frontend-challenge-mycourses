@@ -1,9 +1,9 @@
 import ModalWrapper from "@components/ModalWrapper";
-import { Course } from "@/app/_components/Courses";
 import svgHeart from "/public/icons/heart.svg";
 import { notFound } from "next/navigation";
 import * as S from "./page.styled";
 import Image from "next/image";
+import { Course } from "@/@types";
 
 async function fetchCouseDetails(slug: string) {
   const response = await fetch(`http://localhost:3000/api/courses/${slug}`);

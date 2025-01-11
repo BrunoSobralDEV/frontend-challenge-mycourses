@@ -1,8 +1,8 @@
 import Image from "next/image";
 import * as S from "./styled/CourseCard.styled";
 import FavoriteButton from "./FavoriteButton";
-import { CourseCardProps } from "./Courses";
 import Link from "next/link";
+import { CourseCardProps } from "@/@types";
 
 export default function CourseCard({ course }: CourseCardProps) {
   const courseForFavorite = {
