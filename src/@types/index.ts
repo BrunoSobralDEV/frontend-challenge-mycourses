@@ -12,7 +12,7 @@ export interface Course extends CourseSummary {
 }
 
 export interface CourseCardProps {
-  course: Course;
+  course: CourseSummary;
 }
 
 export interface FavoriteButtonProps {
