@@ -4,6 +4,7 @@ import StyledComponentsRegistry from "@/lib/styled-components-registry";
 import ClientLayout from "@/lib/client-layout";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
+import { Container } from "./layout.styled";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -42,11 +43,11 @@ export default function RootLayout({
       >
         <StyledComponentsRegistry>
           <ClientLayout>
-            <div className="container">
+            <Container>
               <Header />
               {children}
               <Footer />
-            </div>
+            </Container>
           </ClientLayout>
         </StyledComponentsRegistry>
       </body>

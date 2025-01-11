@@ -15,12 +15,6 @@ const GlobalStyle = createGlobalStyle`
     `}
   }
 
-  .container {
-    display: grid;
-    grid-template-rows: auto 1fr auto auto;
-    min-height: 100vh;
-  }
-
   a {
     text-decoration: none;
     color: ${({ theme }) => theme.colors.primary};

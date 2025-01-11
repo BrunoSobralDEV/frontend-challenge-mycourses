@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import * as S from "../(home)/layout.styled";
+import * as S from "./styled/Header.styled";
 import svgMenu from "/public/icons/menu.svg";
 import svgMagnifyingGlass from "/public/icons/magnifying-glass.svg";
 import svgSignUp from "/public/icons/sign-up.svg";

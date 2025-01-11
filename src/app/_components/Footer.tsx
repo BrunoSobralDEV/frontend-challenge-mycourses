@@ -1,5 +1,5 @@
 import Image from "next/image";
-import * as S from "../(home)/layout.styled";
+import * as S from "./styled/Footer.styled";
 import Link from "next/link";
 
 export default function Footer() {
