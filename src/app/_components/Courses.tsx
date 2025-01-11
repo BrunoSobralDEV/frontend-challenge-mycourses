@@ -20,6 +20,7 @@ export default async function Courses() {
   const data = await response.json();
   const courses:Course[] = data.courses;
 
+  if (!response.ok) return undefined
   return (
     <S.Section>
       <h1>Meus Cursos</h1>

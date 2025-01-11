@@ -2,70 +2,71 @@
 import Image from "next/image";
 import * as S from "../(home)/layout.styled";
 import svgMenu from "/public/icons/menu.svg";
+import svgMagnifyingGlass from "/public/icons/magnifying-glass.svg";
 import svgSignUp from "/public/icons/sign-up.svg";
-import Link from "next/link";
+import svgLogin from "/public/icons/login.svg";
+import svgLoginWhite from "/public/icons/login-white.svg";
 import { useMediaQuery } from "../hooks/useMediaQuery";
 
 export default function Header() {
   const isDesktop = useMediaQuery("(min-width: 769px)");
+  const isMobile = useMediaQuery("(max-width: 769px)");
 
   return (
     <S.Header>
-      {isDesktop ? (
-        <div>
-          <S.Button aria-label="botao lupa">
-            <Image
-              alt="magnifying icon"
-              src="/icons/magnifying-glass.svg"
-              width={20}
-              height={20}
-            />
-          </S.Button>
-          <span>Busca</span>
-        </div>
-      ) : (
+      <S.LeftSection>
+        {isDesktop && (
+          <S.SearchWrapper>
+            <S.SearchLink href="#">
+              <Image alt="magnifying icon" src={svgMagnifyingGlass} />
+            </S.SearchLink>
+            <span>Busca</span>
+          </S.SearchWrapper>
+        )}{" "}
+        {isMobile && (
+          <S.MobileMenu>
+            <Image alt="menu icon" src={svgMenu} />
+            <S.SearchLink href="#">
+              <Image
+                alt="magnifying icon"
+                src={svgMagnifyingGlass}
+              />
+            </S.SearchLink>
+          </S.MobileMenu>
+        )}
+      </S.LeftSection>
 
-        <div style={{ display: "flex", flexDirection: "row", gap: "1.25rem" }}>
-          <Image alt="menu icon" src={svgMenu} />
-          <S.Button aria-label="botao lupa">
-            <Image
-              alt="magnifying icon"
-              src="/icons/magnifying-glass.svg"
-              width={20}
-              height={20}
-            />
-          </S.Button>
-        </div>
-      )}
-      <Link href="/">
+      <S.Logo href="/">
         <Image alt="Evob-logo" src="/images/logo.svg" width={50} height={20} />
-      </Link>
-      {isDesktop ? (
-        <div>
-          <Link href="/cadastro">
-            <Image alt="Sign-up icon" src={svgSignUp} />
-            Cadastre-se
-          </Link>
-          <S.Button aria-label="botao login">
+      </S.Logo>
+
+      <S.RightSection>
+        {isDesktop && (
+          <S.LinksWrapper>
+            <S.SignUpLink href="#">
+              <Image alt="Sign-up icon" src={svgSignUp} />
+              Cadastre-se
+            </S.SignUpLink>
+            <S.LoginLink href="#">
+              <Image
+                alt="login icon"
+                src={isDesktop ? svgLoginWhite : svgLogin}
+              />
+              <span>Entrar</span>
+            </S.LoginLink>
+          </S.LinksWrapper>
+        )}{" "}
+        {isMobile && (
+          <S.LoginLink href="#">
             <Image
               alt="login icon"
               src="/icons/login.svg"
               width={32}
               height={32}
             />
-            <span>Entrar</span>
-          </S.Button>
-        </div>
-      ) : (
-        <S.Button aria-label="botao login">
-          <Image
-            alt="login icon"
-            src="/icons/login.svg"
-            width={32}
-            height={32}
-          />
-        </S.Button>
-      )}
+          </S.LoginLink>
+        )}
+      </S.RightSection>
     </S.Header>
   );
 }
