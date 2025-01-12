@@ -5,14 +5,14 @@ export interface CourseSummary {
   thumbnail: string;
 }
 export interface Course extends CourseSummary {
-  description: string;
+  short_description: string;
   long_description: string;
   banner: string;
   banner_mobile: string;
 }
 
 export interface CourseCardProps {
-  course: CourseSummary;
+  course: Course;
 }
 
 export interface FavoriteButtonProps {

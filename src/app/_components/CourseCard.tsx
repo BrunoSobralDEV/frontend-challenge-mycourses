@@ -38,7 +38,7 @@ export default function CourseCard({ course }: CourseCardProps) {
         </S.CardHeader>
         <S.CardContent>
           <h3>{course.title}</h3>
-          <p>{course.id}</p>
+          <p>{course.short_description}</p>
           <Link href={`/courses/${course.slug}`}>
             <button>Acessar</button>
           </Link>
