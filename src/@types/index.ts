@@ -3,7 +3,9 @@ export interface CourseSummary {
   slug: string;
   title: string;
   thumbnail: string;
+  short_description: string;
 }
+
 export interface Course extends CourseSummary {
   short_description: string;
   long_description: string;
@@ -12,7 +14,7 @@ export interface Course extends CourseSummary {
 }
 
 export interface CourseCardProps {
-  course: Course;
+  course: CourseSummary;
 }
 
 export interface FavoriteButtonProps {

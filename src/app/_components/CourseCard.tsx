@@ -10,6 +10,7 @@ export default function CourseCard({ course }: CourseCardProps) {
     slug: course.slug,
     title: course.title,
     thumbnail: course.thumbnail,
+    short_description: course.short_description,
   };
 
   return (
