@@ -37,7 +37,7 @@ export default async function CourseDetails({
         />
       </S.Banner>
       <S.Wrapper>
-        <FavoriteButton course={courseDetails} text="Favoritar" btnLarge />
+        <FavoriteButton course={courseDetails} btnLarge />
         <S.Content>
           <h1>{courseDetails.title}</h1>
           <div
