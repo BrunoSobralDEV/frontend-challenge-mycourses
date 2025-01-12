@@ -9,7 +9,7 @@ export default function CourseCard({ course }: CourseCardProps) {
     id: course.id,
     slug: course.slug,
     title: course.title,
-    thumbnail: course.thumbnail
+    thumbnail: course.thumbnail,
   };
 
   return (
@@ -37,8 +37,10 @@ export default function CourseCard({ course }: CourseCardProps) {
           </S.FireOnline>
         </S.CardHeader>
         <S.CardContent>
-          <h3>{course.title}</h3>
-          <p>{course.short_description}</p>
+          <div>
+            <h3>{course.title}</h3>
+            <p>{course.short_description}</p>
+          </div>
           <Link href={`/courses/${course.slug}`}>
             <button>Acessar</button>
           </Link>

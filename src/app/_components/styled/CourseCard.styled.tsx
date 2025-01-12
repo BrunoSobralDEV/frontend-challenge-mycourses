@@ -8,8 +8,22 @@ export const CourseCard = styled.div`
   overflow: hidden;
 `;
 
+export const CardHeader = styled.header`
+  position: relative;
+
+  .img-banner {
+    width: 100%;
+    height: 157px;
+    /* object-fit: cover; */
+  }
+`;
+
 export const CardContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 16px;
+  /* height: 260px; */
 
   h3 {
     font-size: ${({ theme }) => theme.fontSizes.xl};
@@ -19,7 +33,13 @@ export const CardContent = styled.div`
   p {
     font-size: 14px;
     color: gray;
-    margin-bottom: 56px;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-bottom: 46px;
   }
 
   button {
@@ -35,35 +55,30 @@ export const CardContent = styled.div`
     font-family: var(--font-inter);
     font-size: ${({ theme }) => theme.fontSizes.md};
     font-weight: 700;
+  }
 
-    @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
+  @media screen and (min-width: ${({ theme }) => theme.screen.sm}) {
+    height: 260px;
+
+    button {
       &:hover {
         background-color: #692ac3;
       }
     }
   }
-`
-export const CardHeader = styled.header`
-  position: relative;
-
-  .img-banner {
-    width: 100%;
-    height: 157px;
-    /* object-fit: cover; */
-  }
-`
+`;
 
 export const Favorite = styled.div`
   position: absolute;
   top: 16px;
   right: 16px;
-`
+`;
 
 export const FireOnline = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
-  
+
   position: absolute;
   bottom: 16px;
   left: 16px;
@@ -77,4 +92,4 @@ export const FireOnline = styled.div`
     font-size: 12px;
     font-weight: 700;
   }
-`
+`;
