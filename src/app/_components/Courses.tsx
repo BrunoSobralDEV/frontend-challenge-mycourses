@@ -11,11 +11,11 @@ export default async function Courses() {
   return (
     <S.Section>
       <h1>Meus Cursos</h1>
-      <div className="grid">
+      <S.CoursesCourses>
         {courses.map((course) => (
           <CourseCard key={course.id} course={course} />
         ))}
-      </div>
+      </S.CoursesCourses>
     </S.Section>
   )
 }
