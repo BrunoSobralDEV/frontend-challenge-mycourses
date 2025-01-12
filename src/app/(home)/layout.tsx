@@ -5,6 +5,8 @@ import ClientLayout from "@/lib/client-layout";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
 import { Container } from "./layout.styled";
+import { ErrorBoundary } from "next/dist/client/components/error-boundary";
+import ErrorPage from "./erro";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -44,9 +46,11 @@ export default function RootLayout({
         <StyledComponentsRegistry>
           <ClientLayout>
             <Container>
-              <Header />
-              {children}
-              <Footer />
+              <ErrorBoundary errorComponent={ErrorPage}>
+                <Header />
+                {children}
+                <Footer />
+              </ErrorBoundary>
             </Container>
           </ClientLayout>
         </StyledComponentsRegistry>
