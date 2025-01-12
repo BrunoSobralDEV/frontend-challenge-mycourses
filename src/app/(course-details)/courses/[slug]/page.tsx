@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import * as S from "./page.styled";
 import Image from "next/image";
 import { Course } from "@/@types";
+import ButtonFavoriteUi from "@/app/_components/ButtonFavoriteUi";
+import FavoriteButton from "@/app/_components/FavoriteButton";
 
 async function fetchCouseDetails(slug: string) {
   const response = await fetch(`http://localhost:3000/api/courses/${slug}`);
@@ -35,10 +37,7 @@ export default async function CourseDetails({
         />
       </S.Banner>
       <S.Wrapper>
-        <S.Button>
-          <Image src={svgHeart} width={12} height={12} alt="heart icon" />
-          Favoritar
-        </S.Button>
+        <FavoriteButton course={courseDetails} text="Favoritar" btnLarge />
         <S.Content>
           <h1>{courseDetails.title}</h1>
           <div

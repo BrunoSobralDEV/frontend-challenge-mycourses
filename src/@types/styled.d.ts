@@ -12,6 +12,8 @@ declare module 'styled-components' {
       "text-secondary": string;
       "text-muted": string;
       "text-footer": string;
+      "text-favorite-button": string;
+      "border-favorite-button": string;
       "bg-button-favorite": string;
       "bg-button-share": string,
       "text-course-page": string;

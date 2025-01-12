@@ -17,6 +17,7 @@ export interface CourseCardProps {
 
 export interface FavoriteButtonProps {
   course: CourseSummary;
+  btnLarge?: boolean;
 }
 
 export interface FavoritesContextProps {
