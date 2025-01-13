@@ -5,7 +5,12 @@ const nextConfig: NextConfig = {
     styledComponents: true,
   },
   images: {
-    domains: ['evob-dev-upload.s3.amazonaws.com', 'i0.wp.com'],//apenas para teste - temporário
+    remotePatterns: [{
+      protocol: 'https',
+      hostname: 'evob-dev-upload.s3.amazonaws.com',
+      pathname: '/**',
+    },
+    ],
   },
   reactStrictMode: true,
   logging: {
