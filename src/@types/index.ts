@@ -27,3 +27,7 @@ export interface FavoritesContextProps {
   toggleFavorite: (course: CourseSummary) => void;
 }
 
+export interface ErrorComponentProps {
+  status: number;
+  text: string;
+}
