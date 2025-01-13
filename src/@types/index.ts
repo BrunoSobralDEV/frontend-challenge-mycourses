@@ -31,7 +31,6 @@ export interface ModalProps {
   toggleFn: () => void;
   copyFn: () => void;
   title: string;
-  slug: string;
   copyStatus: boolean;
 }
 

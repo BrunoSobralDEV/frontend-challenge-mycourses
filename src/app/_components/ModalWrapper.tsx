@@ -18,7 +18,7 @@ export default function ModalWrapper({ course }: Readonly<ModalWrapperProps>) {
 
   const handlToggleModal = () => setModalOpen(!isModalOpen);
   const handleCopy = () => {
-    navigator.clipboard.writeText(`https://www.curso.com/${course.slug}`);
+    navigator.clipboard.writeText(document.location.href);
     setIsCopied(true);
     setTimeout(() => {
       setIsCopied(false);
@@ -33,7 +33,6 @@ export default function ModalWrapper({ course }: Readonly<ModalWrapperProps>) {
       {isModalOpen && (
         <Modal
           title={course.title}
-          slug={course.slug}
           toggleFn={handlToggleModal}
           copyFn={handleCopy}
           copyStatus={isCopied}

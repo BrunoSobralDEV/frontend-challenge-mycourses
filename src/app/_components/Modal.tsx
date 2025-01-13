@@ -9,10 +9,11 @@ import { ModalProps } from "@/@types";
 export default function Modal({
   toggleFn,
   copyFn,
-  slug,
   title,
   copyStatus,
 }: Readonly<ModalProps>) {
+  const url = document.location.href;
+
   return (
     <S.ModalOverlay onClick={toggleFn}>
       <S.Modal onClick={(e) => e.stopPropagation()}>
@@ -21,7 +22,7 @@ export default function Modal({
           <Image onClick={toggleFn} src={svgClose} alt="close icon" />
         </S.ModalHeader>
         <S.InputContainer>
-          <input type="text" value={`https://www.curso.com/${slug}`} readOnly />
+          <input type="text" value={url} readOnly />
           <Image
             onClick={copyFn}
             src={copyStatus ? svgCheck : svgCopy}
@@ -30,7 +31,7 @@ export default function Modal({
         </S.InputContainer>
         <S.ButtonWhatsApp
           href={`https://wa.me/?text=${encodeURIComponent(
-            `Olá, curso: "${title}".`
+            `Olá! Estou compartilhando este curso com você: "${title}".\n\nSaiba mais acessando: ${url}`
           )}`}
           target="_blank"
         >
