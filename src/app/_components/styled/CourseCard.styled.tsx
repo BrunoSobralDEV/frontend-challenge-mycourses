@@ -14,7 +14,6 @@ export const CardHeader = styled.header`
   .img-banner {
     width: 100%;
     height: 157px;
-    /* object-fit: cover; */
   }
 `;
 
@@ -23,7 +22,6 @@ export const CardContent = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding: 16px;
-  /* height: 260px; */
 
   h3 {
     font-size: ${({ theme }) => theme.fontSizes.xl};

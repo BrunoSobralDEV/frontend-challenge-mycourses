@@ -17,7 +17,6 @@ export const Section = styled.section`
     
     max-height: 540px;
     width: 100%;
-    /* min-width:952px; To-do -> apply only bg-image*/
   }
 `;
 
