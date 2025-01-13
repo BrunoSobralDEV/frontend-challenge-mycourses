@@ -15,6 +15,7 @@ export const Banner = styled.div`
   img {
     max-height: 540px;
     width: 100%;
+    height: auto;
   }
 
   @media screen and (min-width: ${({ theme }) => theme.screen.md}) {
