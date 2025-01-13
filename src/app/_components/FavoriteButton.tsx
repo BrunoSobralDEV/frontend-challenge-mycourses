@@ -10,7 +10,7 @@ import svgHeartBlack from "/public/icons/heart-black.svg";
 export default function FavoriteButton({
   course,
   btnLarge,
-}: FavoriteButtonProps) {
+}: Readonly<FavoriteButtonProps>) {
   const { favoriteCourses, toggleFavorite } = useFavorites();
   const isFavorited = favoriteCourses.some((fav) => fav.slug === course.slug);
 

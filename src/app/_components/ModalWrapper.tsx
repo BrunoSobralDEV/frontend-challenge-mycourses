@@ -12,7 +12,7 @@ interface ModalWrapperProps {
   };
 }
 
-export default function ModalWrapper({ course }: ModalWrapperProps) {
+export default function ModalWrapper({ course }: Readonly<ModalWrapperProps>) {
   const [isModalOpen, setModalOpen] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
 

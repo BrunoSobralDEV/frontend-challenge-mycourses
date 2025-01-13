@@ -18,7 +18,7 @@ export default function Modal({
   slug,
   title,
   copyStatus,
-}: ModalProps) {
+}: Readonly<ModalProps>) {
   return (
     <S.ModalOverlay onClick={toggleFn}>
       <S.Modal onClick={(e) => e.stopPropagation()}>

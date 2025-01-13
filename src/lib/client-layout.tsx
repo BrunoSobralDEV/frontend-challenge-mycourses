@@ -6,7 +6,7 @@ import theme from "@/styles/theme";
 import { ReactNode } from "react";
 import { ThemeProvider } from "styled-components";
 
-export default function ClientLayout({ children }: { children: ReactNode }) {
+export default function ClientLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <ThemeProvider theme={theme}>
       <FavoritesProvider>

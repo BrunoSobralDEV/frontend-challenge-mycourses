@@ -14,9 +14,9 @@ async function fetchCouseDetails(slug: string) {
 
 export default async function CourseDetails({
   params,
-}: {
+}: Readonly<{
   params: Promise<{ slug: string }>;
-}) {
+}>) {
   const slug = (await params).slug;
   const courseDetails: Course = await fetchCouseDetails(slug);
 
