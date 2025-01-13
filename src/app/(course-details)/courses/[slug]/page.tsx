@@ -3,9 +3,9 @@ import { notFound } from "next/navigation";
 import * as S from "./page.styled";
 import Image from "next/image";
 import { Course } from "@/@types";
-import FavoriteButton from "@/app/_components/FavoriteButton";
-import ErrorComponent from "@/app/_components/Error";
-import { fetchCouseDetails } from "@/app/api/fetchCourseDetails";
+import FavoriteButton from "@components/FavoriteButton";
+import ErrorComponent from "@components/Error";
+import { fetchCouseDetails } from "@api/fetchCourseDetails";
 
 
 export default async function CourseDetails({

@@ -6,7 +6,7 @@ import svgMagnifyingGlass from "/public/icons/magnifying-glass.svg";
 import svgSignUp from "/public/icons/sign-up.svg";
 import svgLogin from "/public/icons/login.svg";
 import svgLoginWhite from "/public/icons/login-white.svg";
-import { useMediaQuery } from "../hooks/useMediaQuery";
+import { useMediaQuery } from "@hooks/useMediaQuery";
 import svgLogo from "/public/images/logo.svg";
 
 export default function Header() {
@@ -28,10 +28,7 @@ export default function Header() {
           <S.MobileMenu>
             <Image alt="menu icon" src={svgMenu} />
             <S.SearchLink href="#">
-              <Image
-                alt="magnifying icon"
-                src={svgMagnifyingGlass}
-              />
+              <Image alt="magnifying icon" src={svgMagnifyingGlass} />
             </S.SearchLink>
           </S.MobileMenu>
         )}
@@ -59,12 +56,7 @@ export default function Header() {
         )}{" "}
         {isMobile && (
           <S.LoginLink href="#">
-            <Image
-              alt="login icon"
-              src={svgLogin}
-              width={32}
-              height={32}
-            />
+            <Image alt="login icon" src={svgLogin} width={32} height={32} />
           </S.LoginLink>
         )}
       </S.RightSection>

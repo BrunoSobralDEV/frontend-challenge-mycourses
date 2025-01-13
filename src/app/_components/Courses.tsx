@@ -2,7 +2,7 @@ import { Course } from "@/@types";
 import CourseCard from "./CourseCard";
 import * as S from "./styled/Courses.styled";
 import ErrorComponent from "./Error";
-import { fetchCourseData } from "../api/fetchCouses";
+import { fetchCourseData } from "@api/fetchCouses";
 
 export default async function Courses() {
   try {

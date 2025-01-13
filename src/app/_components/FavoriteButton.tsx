@@ -2,7 +2,7 @@
 import Image from "next/image";
 import * as S from "./styled/FavoriteButton.styled";
 import { FavoriteButtonProps } from "@/@types";
-import { useFavorites } from "../Providers/FavoritesContext";
+import { useFavorites } from "@providers/FavoritesContext";
 import svgHeart from "/public/icons/heart.svg";
 import svgHeartFill from "/public/icons/heart-fill.svg";
 import svgHeartBlack from "/public/icons/heart-black.svg";

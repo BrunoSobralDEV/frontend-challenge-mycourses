@@ -1,6 +1,6 @@
-import Banner from "../_components/Banner";
-import Courses from "../_components/Courses";
-import Favorites from "../_components/Favorites";
+import Banner from "@components/Banner";
+import Courses from "@components/Courses";
+import Favorites from "@components/Favorites";
 
 export default function Home() {
   return (
