@@ -2,16 +2,13 @@ import { Course } from "@/@types";
 import CourseCard from "./CourseCard";
 import * as S from "./styled/Courses.styled";
 import ErrorComponent from "./Error";
+import { fetchCourseData } from "../api/fetchCouses";
 
 export default async function Courses() {
   try {
-    const response = await fetch("http://localhost:3000/api/courses");
-
-    const data = await response.json();
-    const courses: Course[] = data.courses || [];
-
-    if (!response.ok) return <ErrorComponent status={response.status} text={response.statusText}/>;
-
+    const data = await fetchCourseData();
+    const courses: Course[] = data.courses;
+    
     return (
       <S.Section>
         <h1>Meus Cursos</h1>
@@ -23,6 +20,9 @@ export default async function Courses() {
       </S.Section>
     );
   } catch (error) {
-    throw new Error(`Error fetching courses:${error}`);
+      const errorMessage = error instanceof Error ? error.message : "Erro desconhecido";
+      if (error) {
+        return <ErrorComponent text={errorMessage} />;
+      }
   }
 }

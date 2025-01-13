@@ -19,8 +19,14 @@ export const ErrorCode = styled.h1`
   color: ${({ theme }) => theme.colors.primary};
 `;
 
-export const Message = styled.p`
+export const Title = styled.p`
   font-size: 1.5rem;
+  color: #5a189a;
+  margin: 1rem 0;
+`;
+
+export const Message = styled.p`
+  font-size: 1.3rem;
   color: #5a189a;
   margin: 1rem 0;
 `;

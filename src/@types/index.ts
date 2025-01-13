@@ -28,6 +28,5 @@ export interface FavoritesContextProps {
 }
 
 export interface ErrorComponentProps {
-  status: number;
   text: string;
 }
