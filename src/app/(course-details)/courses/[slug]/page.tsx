@@ -1,10 +1,8 @@
 import ModalWrapper from "@components/ModalWrapper";
-import svgHeart from "/public/icons/heart.svg";
 import { notFound } from "next/navigation";
 import * as S from "./page.styled";
 import Image from "next/image";
 import { Course } from "@/@types";
-import ButtonFavoriteUi from "@/app/_components/ButtonFavoriteUi";
 import FavoriteButton from "@/app/_components/FavoriteButton";
 
 async function fetchCouseDetails(slug: string) {
