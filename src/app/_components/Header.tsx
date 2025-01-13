@@ -7,6 +7,7 @@ import svgSignUp from "/public/icons/sign-up.svg";
 import svgLogin from "/public/icons/login.svg";
 import svgLoginWhite from "/public/icons/login-white.svg";
 import { useMediaQuery } from "../hooks/useMediaQuery";
+import svgLogo from "/public/images/logo.svg";
 
 export default function Header() {
   const isDesktop = useMediaQuery("(min-width: 769px)");
@@ -37,7 +38,7 @@ export default function Header() {
       </S.LeftSection>
 
       <S.Logo href="/">
-        <Image alt="Evob-logo" src="/images/logo.svg" width={50} height={20} />
+        <Image alt="Evob-logo" src={svgLogo} width={50} height={20} />
       </S.Logo>
 
       <S.RightSection>
@@ -60,7 +61,7 @@ export default function Header() {
           <S.LoginLink href="#">
             <Image
               alt="login icon"
-              src="/icons/login.svg"
+              src={svgLogin}
               width={32}
               height={32}
             />

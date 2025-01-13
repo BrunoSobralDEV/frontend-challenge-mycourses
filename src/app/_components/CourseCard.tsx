@@ -3,6 +3,7 @@ import * as S from "./styled/CourseCard.styled";
 import FavoriteButton from "./FavoriteButton";
 import Link from "next/link";
 import { CourseCardProps } from "@/@types";
+import svgFire from "/public/icons/fire.svg";
 
 export default function CourseCard({ course }: CourseCardProps) {
   const courseForFavorite = {
@@ -29,9 +30,7 @@ export default function CourseCard({ course }: CourseCardProps) {
           </S.Favorite>
           <S.FireOnline>
             <Image
-              src="/icons/fire.svg"
-              width="22"
-              height="22"
+              src={svgFire}
               alt="fire icon"
             />
             <span>ONLINE</span>

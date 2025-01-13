@@ -1,42 +1,26 @@
 import Image from "next/image";
 import * as S from "./styled/Footer.styled";
 import Link from "next/link";
+import svgWhatsApp from "/public/icons/whatsapp.svg";
+import svgYouTube from "/public/icons/youtube.svg";
+import svgFaceBook from "/public/icons/facebook.svg";
+import svgInstagram from "/public/icons/instagram.svg";
 
 export default function Footer() {
   return (
     <S.Footer>
       <div className="social-media">
         <Link href="https://evob.com.br/">
-          <Image
-            alt="whatsapp-icon"
-            src="/icons/whatsapp.svg"
-            width={20}
-            height={20}
-          />
+          <Image alt="whatsapp-icon" src={svgWhatsApp} />
         </Link>
         <Link href="https://evob.com.br">
-          <Image
-            alt="youtube-icon"
-            src="/icons/youtube.svg"
-            width={20}
-            height={20}
-          />
+          <Image alt="youtube-icon" src={svgYouTube} />
         </Link>
         <Link href="https://evob.com.br">
-          <Image
-            alt="facebook-icon"
-            src="/icons/facebook.svg"
-            width={20}
-            height={20}
-          />
+          <Image alt="facebook-icon" src={svgFaceBook} />
         </Link>
         <Link href="https://evob.com.br">
-          <Image
-            alt="instagram-icon"
-            src="/icons/instagram.svg"
-            width={20}
-            height={20}
-          />
+          <Image alt="instagram-icon" src={svgInstagram} />
         </Link>
       </div>
       <div className="details">
