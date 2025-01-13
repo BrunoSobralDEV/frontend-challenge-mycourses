@@ -3,15 +3,9 @@ import * as S from "@styled/Modal.styled";
 import svgCopy from "/public/icons/copy.svg";
 import svgCheck from "/public/icons/check-circle.svg";
 import svgClose from "/public/icons/close.svg";
-
 import svgWhatsApp from "/public/icons/whatsapp.svg";
-interface ModalProps {
-  toggleFn: () => void;
-  copyFn: () => void;
-  title: string;
-  slug: string;
-  copyStatus: boolean;
-}
+import { ModalProps } from "@/@types";
+
 export default function Modal({
   toggleFn,
   copyFn,

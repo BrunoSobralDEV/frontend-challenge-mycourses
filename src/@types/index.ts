@@ -27,6 +27,14 @@ export interface FavoritesContextProps {
   toggleFavorite: (course: CourseSummary) => void;
 }
 
+export interface ModalProps {
+  toggleFn: () => void;
+  copyFn: () => void;
+  title: string;
+  slug: string;
+  copyStatus: boolean;
+}
+
 export interface ErrorComponentProps {
   text: string;
 }
