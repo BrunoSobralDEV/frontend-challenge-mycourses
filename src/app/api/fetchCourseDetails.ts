@@ -1,5 +1,5 @@
 export const fetchCouseDetails = async (slug: string) => {
-  const apiUrl = `https://api.evob.dev/content/courses/${slug}`;
+  const apiUrl = `${process.env.EVOB_API_BASEURL}/courses/${slug}`;
 
   try {
     const response = await fetch(apiUrl, {
