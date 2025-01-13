@@ -1,9 +1,9 @@
 import Image from "next/image";
-import * as S from "./styled/CourseCard.styled";
-import FavoriteButton from "./FavoriteButton";
 import Link from "next/link";
 import { CourseCardProps } from "@/@types";
-import svgFire from "/public/icons/fire.svg";
+import * as S from "./styled/CourseCard.styled";
+import FavoriteButton from "./FavoriteButton";
+import svgFire from "@icons/fire.svg";
 
 export default function CourseCard({ course }: Readonly<CourseCardProps>) {
   const courseForFavorite = {

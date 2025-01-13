@@ -1,7 +1,7 @@
 "use client";
 import * as S from "./styled/Favorites.styled";
 import CourseCard from "./CourseCard";
-import svgHearthSearch from "/public/icons/heart-search.svg";
+import svgHearthSearch from "@icons/heart-search.svg";
 import Image from "next/image";
 import { useFavorites } from "@providers/FavoritesContext";
 

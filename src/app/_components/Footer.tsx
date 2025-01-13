@@ -1,10 +1,10 @@
 import Image from "next/image";
 import * as S from "./styled/Footer.styled";
 import Link from "next/link";
-import svgWhatsApp from "/public/icons/whatsapp.svg";
-import svgYouTube from "/public/icons/youtube.svg";
-import svgFaceBook from "/public/icons/facebook.svg";
-import svgInstagram from "/public/icons/instagram.svg";
+import svgWhatsApp from "@icons/whatsapp.svg";
+import svgYouTube from "@icons/youtube.svg";
+import svgFaceBook from "@icons/facebook.svg";
+import svgInstagram from "@icons/instagram.svg";
 
 export default function Footer() {
   return (

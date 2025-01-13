@@ -1,9 +1,9 @@
 import Image from "next/image";
 import * as S from "@styled/Modal.styled";
-import svgCopy from "/public/icons/copy.svg";
-import svgCheck from "/public/icons/check-circle.svg";
-import svgClose from "/public/icons/close.svg";
-import svgWhatsApp from "/public/icons/whatsapp.svg";
+import svgCopy from "@icons/copy.svg";
+import svgCheck from "@icons/check-circle.svg";
+import svgClose from "@icons/close.svg";
+import svgWhatsApp from "@icons/whatsapp.svg";
 import { ModalProps } from "@/@types";
 
 export default function Modal({

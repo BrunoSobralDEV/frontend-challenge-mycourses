@@ -1,13 +1,13 @@
 "use client";
 import Image from "next/image";
 import * as S from "./styled/Header.styled";
-import svgMenu from "/public/icons/menu.svg";
-import svgMagnifyingGlass from "/public/icons/magnifying-glass.svg";
-import svgSignUp from "/public/icons/sign-up.svg";
-import svgLogin from "/public/icons/login.svg";
-import svgLoginWhite from "/public/icons/login-white.svg";
+import svgMenu from "@icons/menu.svg";
+import svgMagnifyingGlass from "@icons/magnifying-glass.svg";
+import svgSignUp from "@icons/sign-up.svg";
+import svgLogin from "@icons/login.svg";
+import svgLoginWhite from "@icons/login-white.svg";
 import { useMediaQuery } from "@hooks/useMediaQuery";
-import svgLogo from "/public/images/logo.svg";
+import svgLogo from "@images/logo.svg";
 
 export default function Header() {
   const isDesktop = useMediaQuery("(min-width: 769px)");

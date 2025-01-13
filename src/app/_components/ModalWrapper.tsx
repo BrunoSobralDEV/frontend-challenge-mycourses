@@ -1,7 +1,7 @@
 "use client";
 import * as S from "@styled/Modal.styled";
 import Image from "next/image";
-import svgShare from "/public/icons/share.svg";
+import svgShare from "@icons/share.svg";
 import { useState } from "react";
 import Modal from "./Modal";
 
