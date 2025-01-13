@@ -6,7 +6,7 @@ import Header from "@components/Header";
 import Footer from "@components/Footer";
 import { Container } from "./layout.styled";
 import { ErrorBoundary } from "next/dist/client/components/error-boundary";
-import ErrorPage from "./erro";
+import ErrorPage from "../_components/ErrorPage";
 import { Suspense } from "react";
 import Loading from "../_components/Loading";
 
