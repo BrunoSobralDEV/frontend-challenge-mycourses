@@ -7,6 +7,8 @@ import Footer from "@components/Footer";
 import { Container } from "./layout.styled";
 import { ErrorBoundary } from "next/dist/client/components/error-boundary";
 import ErrorPage from "./erro";
+import { Suspense } from "react";
+import Loading from "../_components/Loading";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -47,9 +49,11 @@ export default function RootLayout({
           <ClientLayout>
             <Container>
               <ErrorBoundary errorComponent={ErrorPage}>
-                <Header />
-                {children}
-                <Footer />
+                <Suspense fallback={<Loading />}>
+                  <Header />
+                  {children}
+                  <Footer />
+                </Suspense>
               </ErrorBoundary>
             </Container>
           </ClientLayout>
