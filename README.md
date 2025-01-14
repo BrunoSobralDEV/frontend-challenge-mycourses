@@ -95,7 +95,7 @@ For more information about the technologies used:
 
 ## 🎬 Video
 
-- [Link to the demonstration video](https://youtu.be/I7EFoMxWeAs)
+- [Link to the demonstration video](https://youtu.be/ZLbaoRkd2Ag)
 
 ## 👤 Author
 
