@@ -1,20 +1,25 @@
 # Frontend Challenge MyCourses
 
-## 🏠 Introduction
 
-This project is a frontend application developed as part of a technical challenge. The goal is to demonstrate skills in modern web development.
+<img src="./.github/video-demonstration.gif" align="right">
+
 
 ## 📌 Table of Contents
-
+- [Introduction](#🏠introduction)
 - [Installation](#🛠️installation)
 - [Usage](#🚀usage)
-- [Features](#features)
+- [Features](#✨features)
 - [Techs](#💻techs)
-- [Configuration](#configuration)
-- [Documentation](#documentation)
-- [Examples](#examples)
+- [Configuration](#⚙️configuration)
+- [Documentation](#📚documentation)
+- [Video](#🎬video)
 - [Author](#👤author)
 - [License](#📜license)
+
+## 🏠 Introduction
+
+This project is a frontend application developed as part of a technical challenge. The goal is to demonstrate expertise in modern web development using **Next.js** and **Styled-components**, while adhering to industry best practices such as **clean code**, **responsive design**, **performance optimization**, and **scalable architecture**. The project highlights strong skills in **component-based development**, **state management**, and **maintainable styling solutions**.
+
 
 ## 🛠️ Installation
 
@@ -58,34 +63,39 @@ bun dev
 
 - Open http://localhost:3000 in your browser to see the result.
 
-## Features
+## ✨ Features
 
-- Responsive user interface.
-- Integration with external APIs.
-- Efficient state management.
+- **Responsive user interface:** Ensures compatibility across devices with different screen sizes, providing a seamless user experience.  
+- **Integration with external APIs:** Efficiently fetches and displays data from external services, demonstrating proficiency in API communication and data handling.  
+- **Efficient state management:** Utilizes modern state management techniques to ensure scalability and maintainability of the application.  
+- **Component-based architecture:** Promotes code reusability and easier maintenance by breaking down the UI into modular components.  
+- **Dynamic styling with Styled-components:** Provides scoped and maintainable styling solutions, enhancing the development process and user interface consistency.  
+- **Optimized performance with Next.js:** Leverages Next.js features like server-side rendering (SSR) and static site generation (SSG) for improved performance and SEO.
+
 
 ## 💻 Techs
 
-- React 18.2.0
-- Next.js 13.4.12
-- TypeScript 5.1.6
-- Styled Components CSS 3.3.2
+[![Next.JS](https://img.shields.io/badge/-Next_JS-black?style=for-the-badge&logoColor=white&logo=nextdotjs&color=000000)](#)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](#)
+[![React.Js](https://img.shields.io/badge/React.Js-blue?style=for-the-badge&logo=React&logoColor=0FC8EC)](#)
+[![StyledComponents](https://img.shields.io/badge/Styled_Components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)](#)
 
-## Configuration
+
+## ⚙️ Configuration
 
 Rename the `.env.example` file to `.env` and configure the environment variables as needed.
 
-## Documentation
+## 📚 Documentation
 
 For more information about the technologies used:
 
-- Documentação do Next.js
-- Documentação do React
-- Documentação do Tailwind CSS
+- [Documentação do Next.js](https://nextjs.org/docs)
+- [Documentação do React](https://react.dev/learn)
+- [Documentação do Styled Components](https://styled-components.com/docs)
 
-## Examples
+## 🎬 Video
 
-You can start editing the page by modifying `app/page.tsx`. The page automatically updates as you edit the file.
+- [Link to the demonstration video](https://www.youtube.com/watch?v)
 
 ## 👤 Author
 
